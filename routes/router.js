@@ -18,10 +18,13 @@ const messages = [
     }
 ];
 
-const indexRouter = Router();
+const router = Router();
 
-indexRouter.get("/", (req, res) => {
+router.get("/", (req, res) => {
     res.render("index", { title: "Mini Messageboard", messages: messages})
 })
+router.get("/new", (req, res) => {
+    res.render("form", {})
+})
 
-module.exports = indexRouter;
+module.exports = router;
