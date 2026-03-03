@@ -4,6 +4,7 @@ const path = require("node:path");
 
 const router = require("./routes/router")
 
+app.use(express.urlencoded({ extended: true }));
 app.use("/", router);
 
 app.set("views", path.join(__dirname, "views"));
